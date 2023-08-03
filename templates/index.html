@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="static/style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a href="#" class="logo"></a>
+         <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <div class="bx bx-moon" id="darkmode"></div>
+        </ul>
+    </header>
+    <!-- Home -->
+
+    <section class="home" id="home">
+        <div class="social">
+            <a href="https://github.com/yksupraja"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/y-k-supraja-197831233/"><i class='bx bxl-linkedin' ></i></a>
+        </div>
+        <div class="home-img">
+           <img src="{{ url_for('static', filename='111.jpg') }}" alt="">
+
+        </div>
+        <div class="home-text">
+            <span>Hi</span>
+            <h1>Supraja YK</h1>
+            <h2>M.Sc Data Science</h2>
+            <p><br></p>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>About Me</h2>
+            <span>Introduction</span>
+        </div>
+        <!-- About Content -->
+        <div class="about-container">
+            <div class="about-img">
+               <img src="{{ url_for('static', filename='/images/123.png') }}" alt="">
+
+            </div>
+            <div class="about-text">
+                <p>To obtain a data science position where I can leverage my skills in
+                    machine learning, data analysis and data visualization to drive
+                    insights and improve business outcomes. As a data-driven problem
+                    solver, I am dedicated to delivering measurable results and
+                    contributing to an organization.
+                    </p>
+                <div class="information">
+                    <!-- Box 1 -->
+                    <div class="info-box">
+                        <i class='bx bxs-user' ></i>
+                        <span>Supraja</span>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="info-box">
+                        <i class='bx bxs-phone' ></i>
+                        <span>8374120996</span>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="info-box">
+                        <i class='bx bxs-envelope' ></i>
+                        <span>supraja2d@gmail.com</span>
+                    </div>
+                </div>
+                <a href="#" class="btn">Download Cv</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <div class="heading">
+            <h2>Skills</h2>
+            <span>My Skills</span>
+        </div>
+        <!-- Skills Content -->
+        <div class="skills-container">
+            <div class="bars">
+                <!-- Box 1 -->
+                <div class="bars-box">
+                    <h3><a class="btn">Machine learning</a></h3> <br>
+                     <h3><a class="btn">Power BI</a></h3>
+                </div>
+                <!-- Box 2 -->
+                <div class="bars-box">
+                    <h3><a class="btn">Deep Learning</a></h3> <br>
+                    <h3><a class="btn">HTML</a></h3>
+                </div>
+                <!-- Box 3 -->
+                <div class="bars-box">
+                    <h3><a class="btn">MongoDB</a></h3> <br>
+                     <h3><a class="btn">Excel</a></h3>
+                </div>
+                <!-- Box 4 -->
+                <div class="bars-box">
+                    <h3><a class="btn">PYTHON</a></h3> <br>
+                    <h3><a class="btn">SQL</a></h3>
+            </div>
+
+            </div></div>
+
+      </section>
+
+    <!-- Projects -->
+    <section class="Projects" id="Projects">
+        <div class="heading">
+            <h2>Projects</h2>
+            <span>MY Projects</span>
+        </div>
+        <div class="services-content">
+            <!-- Box 1 -->
+            <div class="services-box">
+                <i class='bx bx-Bank' ></i>
+                <h3>Bank Marketing</h3>
+                <p>The classification goal is to predict if the client will subscribe a
+                    term deposit.
+                    </p>
+                <a href="#">Learn More</a>
+            </div>
+            <!-- Box 2 -->
+            <div class="services-box">
+                <i class='bx bx-' ></i>
+                <h3>Book Recommendation System</h3>
+                <p>Book recommendation system is to enhance the user experience
+                    by reducing the effort required to discover new books.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <!-- Box 3 -->
+            <div class="services-box">
+                <i class='bx bxl-sales' ></i>
+                <h3>Inventory analysis</h3>
+                <p>The goal is to gain the insights in inventory analysis and improve
+                    sales performance and make informed decisions that can lead to
+                    profitability.
+                    </p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+        </div>
+    </section>
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="heading">
+            <h2>Contact</h2>
+            <span>Connect With Us</span>
+        </div>
+        <div class="contact-form">
+    <form action="/send_email" method="POST">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="email" name="email" placeholder="Your Email">
+        <textarea name="message" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
+        <input type="submit" value="Send" class="contact-button">
+    </form>
+</div>
+
+     </section>
+    <!-- Footer -->
+    <div class="footer">
+        <h2>Get in Touch</h2>
+        <div class="footer-social">
+            <a href="https://github.com/yksupraja"><i class='bx bxl-github' ></i></a>
+            <a href="https://www.linkedin.com/in/y-k-supraja-197831233/"><i class='bx bxl-linkedin' ></i></a>
+        </div>
+
+    </div>
+    <!-- Copyright -->
+    <div class="copyright">
+    </div>
+    <!-- Link To JS -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
